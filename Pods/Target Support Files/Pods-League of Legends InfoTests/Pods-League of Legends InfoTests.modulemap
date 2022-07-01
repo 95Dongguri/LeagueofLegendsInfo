@@ -1,0 +1,6 @@
+framework module Pods_League_of_Legends_InfoTests {
+  umbrella header "Pods-League of Legends InfoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
