@@ -6,13 +6,10 @@
 //
 
 import UIKit
-import RxSwift
 import RxCocoa
 import SnapKit
 
 class RankingViewController: UIViewController {
-    
-    let disposeBag = DisposeBag()
     
     let listView = RankingListView()
     

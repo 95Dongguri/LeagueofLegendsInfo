@@ -44,7 +44,7 @@ class SearchRankingNetwork {
          "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
          "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
          "Origin": "https://developer.riotgames.com",
-         "X-Riot-Token": "RGAPI-10b489b1-51fb-4893-bd5d-a99ebce77f3c"
+         "X-Riot-Token": "API-KEY"
          }
          
          */
