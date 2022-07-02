@@ -10,7 +10,6 @@ import SnapKit
 
 class RankingListCell: UITableViewCell {
     let summonerNameLabel = UILabel()
-    let tierLabel = UILabel()
     let leaguePointsLabel = UILabel()
     let winsLabel = UILabel()
     let lossesLabel = UILabel()
@@ -20,9 +19,6 @@ class RankingListCell: UITableViewCell {
         super.layoutSubviews()
         
         summonerNameLabel.font = .systemFont(ofSize: 24.0, weight: .bold)
-        
-        tierLabel.font = .systemFont(ofSize: 14.0, weight: .semibold)
-        tierLabel.textColor = .gray
         
         leaguePointsLabel.font = .systemFont(ofSize: 24.0, weight: .semibold)
         leaguePointsLabel.textColor = .gray
@@ -36,17 +32,13 @@ class RankingListCell: UITableViewCell {
         winrateLabel.font = .systemFont(ofSize: 18.0, weight: .medium)
         winrateLabel.textColor = .systemPink
         
-        [summonerNameLabel, tierLabel, leaguePointsLabel, winsLabel, lossesLabel, winrateLabel].forEach {
+        [summonerNameLabel, leaguePointsLabel, winsLabel, lossesLabel, winrateLabel].forEach {
             contentView.addSubview($0)
         }
         
         summonerNameLabel.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(8.0)
-        }
-        
-        tierLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(16.0)
-            $0.top.equalTo(summonerNameLabel.snp.bottom).offset(3.0)
+            $0.top.equalToSuperview().inset(8.0)
+            $0.leading.equalToSuperview().inset(32.0)
         }
         
         leaguePointsLabel.snp.makeConstraints {
@@ -56,7 +48,7 @@ class RankingListCell: UITableViewCell {
         
         winsLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(32.0)
-            $0.top.equalTo(tierLabel.snp.bottom).offset(5.0)
+            $0.top.equalTo(summonerNameLabel.snp.bottom).offset(5.0)
         }
         
         lossesLabel.snp.makeConstraints {
@@ -72,8 +64,7 @@ class RankingListCell: UITableViewCell {
     
     func setData(_ data: RankingListCellData) {
         summonerNameLabel.text = data.summonerName
-        tierLabel.text = "Challenger"
-        leaguePointsLabel.text = "\(data.leaguePoints) LP"
+        leaguePointsLabel.text = "C1 \(data.leaguePoints) LP"
         winsLabel.text = "\(data.wins)W"
         lossesLabel.text = "\(data.losses)L"
         

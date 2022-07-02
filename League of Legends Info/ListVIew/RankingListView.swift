@@ -41,6 +41,6 @@ class RankingListView: UITableView {
         backgroundColor = .white
         register(RankingListCell.self, forCellReuseIdentifier: "RankingListCell")
         separatorStyle = .singleLine
-        rowHeight = 90.0
+        rowHeight = 70.0
     }
 }
