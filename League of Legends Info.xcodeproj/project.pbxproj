@@ -11,6 +11,7 @@
 		95495A2ED25836B312DE0B58 /* Pods_League_of_Legends_Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1D1F9BD1E4280D2655E0A1 /* Pods_League_of_Legends_Info.framework */; };
 		B0E6B625DEEE65B46E2B0A3F /* Pods_League_of_Legends_Info_League_of_Legends_InfoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC91EA6C3E5731EC02B4EAB /* Pods_League_of_Legends_Info_League_of_Legends_InfoUITests.framework */; };
 		CE1D588D286EFFC000C82027 /* RankingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D588C286EFFC000C82027 /* RankingListView.swift */; };
+		CE2DE01C28702DD500E14C75 /* RankingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */; };
 		CE792022286EE39000EAC09E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792021286EE39000EAC09E /* AppDelegate.swift */; };
 		CE792024286EE39000EAC09E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792023286EE39000EAC09E /* SceneDelegate.swift */; };
 		CE792026286EE39000EAC09E /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792025286EE39000EAC09E /* RankingViewController.swift */; };
@@ -54,6 +55,7 @@
 		BC93A80951BE78963564B763 /* Pods-League of Legends Info-League of Legends InfoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-League of Legends Info-League of Legends InfoUITests.debug.xcconfig"; path = "Target Support Files/Pods-League of Legends Info-League of Legends InfoUITests/Pods-League of Legends Info-League of Legends InfoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4588F9B9DEAFDB19D4FC762 /* Pods-League of Legends Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-League of Legends Info.debug.xcconfig"; path = "Target Support Files/Pods-League of Legends Info/Pods-League of Legends Info.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1D588C286EFFC000C82027 /* RankingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingListView.swift; sourceTree = "<group>"; };
+		CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingListViewModel.swift; sourceTree = "<group>"; };
 		CE79201E286EE39000EAC09E /* League of Legends Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "League of Legends Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE792021286EE39000EAC09E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE792023286EE39000EAC09E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				CE792065286EF90400EAC09E /* RankingListCell.swift */,
 				CE1D588C286EFFC000C82027 /* RankingListView.swift */,
+				CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */,
 			);
 			path = ListVIew;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				CE792026286EE39000EAC09E /* RankingViewController.swift in Sources */,
 				CE792059286EEB4000EAC09E /* SearchRankingNetwork.swift in Sources */,
 				CE79205B286EECF700EAC09E /* SearchError.swift in Sources */,
+				CE2DE01C28702DD500E14C75 /* RankingListViewModel.swift in Sources */,
 				CE792022286EE39000EAC09E /* AppDelegate.swift in Sources */,
 				CE792066286EF90400EAC09E /* RankingListCell.swift in Sources */,
 				CE1D588D286EFFC000C82027 /* RankingListView.swift in Sources */,

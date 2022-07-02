@@ -19,7 +19,6 @@ class RankingViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        bind()
         attribute()
         layout()
     }
@@ -28,40 +27,8 @@ class RankingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
-        let rankingResult = SearchRankingNetwork().searchRanking()
-            .asObservable()
-            .share()
-        
-        let rankingValue = rankingResult
-            .compactMap { data -> Ranking? in
-                guard case .success(let value) = data else { return nil }
-                
-                return value
-            }
-        
-        let rankingError = rankingResult
-            .compactMap { data -> String? in
-                guard case .failure(let error) = data else { return nil }
-                
-                return error.localizedDescription
-            }
-        
-        let cellData = rankingValue
-            .map { ranking -> [RankingListCellData] in
-                return ranking.entries
-                    .map { entry in
-                        RankingListCellData(
-                            summonerName: entry.summonerName,
-                            leaguePoints: entry.leaguePoints,
-                            wins: entry.wins,
-                            losses: entry.losses
-                        )
-                    }
-                    .sorted { $0.leaguePoints > $1.leaguePoints }
-            }
-            .bind(to: listView.cellData)
-            .disposed(by: disposeBag)
+    func bind(_ viewModel: RankingViewModel) {
+        listView.bind(viewModel.rankingListViewModel)
     }
     
     private func attribute() {

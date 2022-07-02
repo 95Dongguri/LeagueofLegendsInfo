@@ -56,7 +56,7 @@ class SearchRankingNetwork {
         request.setValue("ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", forHTTPHeaderField: "Accept-Language")
         request.setValue("application/x-www-form-urlencoded; charset=UTF-8", forHTTPHeaderField: "Accept-Charset")
         request.setValue("https://developer.riotgames.com", forHTTPHeaderField: "Origin")
-        request.setValue("RGAPI-10b489b1-51fb-4893-bd5d-a99ebce77f3c", forHTTPHeaderField: "X-Riot-Token")
+        request.setValue("RGAPI-e0137464-9637-4117-93cf-d74380861111", forHTTPHeaderField: "X-Riot-Token")
         
         return session.rx.data(request: request as URLRequest)
             .map { data in

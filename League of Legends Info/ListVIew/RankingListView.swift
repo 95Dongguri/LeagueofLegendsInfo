@@ -10,14 +10,12 @@ import RxSwift
 import RxCocoa
 
 class RankingListView: UITableView {
-    let disposeBag = DisposeBag()
     
-    let cellData = PublishSubject<[RankingListCellData]>()
+    let disposeBag = DisposeBag()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
-        bind()
         attribute()
     }
     
@@ -25,12 +23,13 @@ class RankingListView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func bind() {
-        cellData
+    func bind(_ viewModel: RankingListViewModel) {
+        viewModel.cellData
             .asDriver(onErrorJustReturn: [])
             .drive(self.rx.items) { tv, row, data in
                 let index = IndexPath(row: row, section: 0)
                 let cell = tv.dequeueReusableCell(withIdentifier: "RankingListCell", for: index) as! RankingListCell
+                
                 cell.setData(data)
                 
                 return cell
