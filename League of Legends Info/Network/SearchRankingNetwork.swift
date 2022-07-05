@@ -8,24 +8,6 @@
 import RxSwift
 import RxCocoa
 
-struct SearchRankingAPI {
-    // url: https://kr.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5
-    
-    static let scheme = "https"
-    static let host = "kr.api.riotgames.com"
-    static let path = "/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5"
-    
-    func searchRanking() -> URLComponents {
-        var components = URLComponents()
-        
-        components.scheme = SearchRankingAPI.scheme
-        components.host = SearchRankingAPI.host
-        components.path = SearchRankingAPI.path
-        
-        return components
-    }
-}
-
 class SearchRankingNetwork {
     private let session: URLSession
     let api = SearchRankingAPI()
@@ -56,7 +38,7 @@ class SearchRankingNetwork {
         request.setValue("ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", forHTTPHeaderField: "Accept-Language")
         request.setValue("application/x-www-form-urlencoded; charset=UTF-8", forHTTPHeaderField: "Accept-Charset")
         request.setValue("https://developer.riotgames.com", forHTTPHeaderField: "Origin")
-        request.setValue("RGAPI-e0137464-9637-4117-93cf-d74380861111", forHTTPHeaderField: "X-Riot-Token")
+        request.setValue("RGAPI-4fa9865a-7712-464e-ad32-e5e40b1e6561", forHTTPHeaderField: "X-Riot-Token")
         
         return session.rx.data(request: request as URLRequest)
             .map { data in

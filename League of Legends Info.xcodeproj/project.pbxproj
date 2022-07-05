@@ -12,6 +12,7 @@
 		B0E6B625DEEE65B46E2B0A3F /* Pods_League_of_Legends_Info_League_of_Legends_InfoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC91EA6C3E5731EC02B4EAB /* Pods_League_of_Legends_Info_League_of_Legends_InfoUITests.framework */; };
 		CE1D588D286EFFC000C82027 /* RankingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D588C286EFFC000C82027 /* RankingListView.swift */; };
 		CE2DE01C28702DD500E14C75 /* RankingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */; };
+		CE42FD2C2873DE0B00B379D1 /* SearchRankingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42FD2B2873DE0B00B379D1 /* SearchRankingAPI.swift */; };
 		CE792022286EE39000EAC09E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792021286EE39000EAC09E /* AppDelegate.swift */; };
 		CE792024286EE39000EAC09E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792023286EE39000EAC09E /* SceneDelegate.swift */; };
 		CE792026286EE39000EAC09E /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE792025286EE39000EAC09E /* RankingViewController.swift */; };
@@ -56,6 +57,7 @@
 		C4588F9B9DEAFDB19D4FC762 /* Pods-League of Legends Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-League of Legends Info.debug.xcconfig"; path = "Target Support Files/Pods-League of Legends Info/Pods-League of Legends Info.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1D588C286EFFC000C82027 /* RankingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingListView.swift; sourceTree = "<group>"; };
 		CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingListViewModel.swift; sourceTree = "<group>"; };
+		CE42FD2B2873DE0B00B379D1 /* SearchRankingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRankingAPI.swift; sourceTree = "<group>"; };
 		CE79201E286EE39000EAC09E /* League of Legends Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "League of Legends Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE792021286EE39000EAC09E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE792023286EE39000EAC09E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,7 +141,6 @@
 				CE792053286EE54E00EAC09E /* Entities */,
 				CE792057286EEB2B00EAC09E /* Network */,
 				CE79205C286EF73600EAC09E /* Scenes */,
-				CE792064286EF8CB00EAC09E /* ListVIew */,
 				CE79202A286EE39200EAC09E /* Assets.xcassets */,
 				CE79202C286EE39200EAC09E /* LaunchScreen.storyboard */,
 				CE79202F286EE39200EAC09E /* Info.plist */,
@@ -178,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				CE792058286EEB4000EAC09E /* SearchRankingNetwork.swift */,
+				CE42FD2B2873DE0B00B379D1 /* SearchRankingAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				CE79205D286EF73F00EAC09E /* Ranking */,
+				CE792064286EF8CB00EAC09E /* ListView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -200,14 +203,14 @@
 			path = Ranking;
 			sourceTree = "<group>";
 		};
-		CE792064286EF8CB00EAC09E /* ListVIew */ = {
+		CE792064286EF8CB00EAC09E /* ListView */ = {
 			isa = PBXGroup;
 			children = (
 				CE792065286EF90400EAC09E /* RankingListCell.swift */,
 				CE1D588C286EFFC000C82027 /* RankingListView.swift */,
 				CE2DE01B28702DD500E14C75 /* RankingListViewModel.swift */,
 			);
-			path = ListVIew;
+			path = ListView;
 			sourceTree = "<group>";
 		};
 		DB51A2ACD82391A4518E3C13 /* Pods */ = {
@@ -484,6 +487,7 @@
 				CE792022286EE39000EAC09E /* AppDelegate.swift in Sources */,
 				CE792066286EF90400EAC09E /* RankingListCell.swift in Sources */,
 				CE1D588D286EFFC000C82027 /* RankingListView.swift in Sources */,
+				CE42FD2C2873DE0B00B379D1 /* SearchRankingAPI.swift in Sources */,
 				CE792052286EE42300EAC09E /* Ranking.swift in Sources */,
 				CE79205F286EF75700EAC09E /* RankingListCellData.swift in Sources */,
 				CE792024286EE39000EAC09E /* SceneDelegate.swift in Sources */,
